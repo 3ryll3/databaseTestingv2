@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Database [ Beta Test v2 ]</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/66978bd54f.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+            
+            <div class="dropup">
+                <button class="btn btn-menu"><i class="fas fa-bars"></i></button>
+                <div class="dropup-content">
+                    <ul class="navbar">
+                        <li><button class="btn btn-add"><i class="fas fa-user-plus"></i></button></li>
+                        <li><button class="btn btn-acc"><i class="fas fa-user"></i></button></li>
+                        <li><button class="btn btn-info"><i class="fas fa-info"></i></button></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Account Modal -->
+        <div class="acc-modal modal-wrapper">
+            <div class="modal">
+                <div class="modal-header"><h3 class="header-acc"></h3></div>
+                <div class="modal-body">
+                    <div class="note-acc"></div>
+                    <table class="table-users">
+                        <tr class="flex-container"></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!--Add Modal-->
+        <div class="add-modal modal-wrapper">
+            <div class="modal">
+                <div class="modal-header"><h3>Sign Up</h3></div>
+                <div class="modal-body">
+                    <form class="form" autocomplete="off">
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="number" name="phoneNumber" placeholder="Phone Number" required>
+                        <button class="btn btn-modal">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Edit Modal-->
+        <div class="edit-modal modal-wrapper">
+            <div class="modal modal-acc">
+                <div class="modal-header"><h3>Change Account Info</h3></div>
+                <div class="modal-body">
+                    <form class="form" autocomplete="off">
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="number" name="phoneNumber" placeholder="Phone Number" required>
+                        <button class="btn btn-modal">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Info Modal-->
+        <div class="info-modal modal-wrapper">
+            <div class="modal">
+                <div class="modal-header"><h3>OneDay To Do</h3></div>
+                <div class="modal-body">
+                    <ul>
+                        <li>“OneDay is a simple website where you can manage your to-do for one day.” i.e. Blurb about OneDay.</li>
+                        <li>Disclaimer about usage of user account information.</li>
+                        <li>Disclaimer about user to-do and notes (is stored in localStorage).</li>
+                        <li>Credit: link to images (incl. photographers) and Pexels.com.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Deleted Modal-->
+        <div class="deleted-modal modal-wrapper">
+            <div class="modal">
+                <div class="modal-header"><h3>Account successfully deleted.</h3></div>
+            </div>
+        </div>
+
+        <!-- Import the functions you need from the SDKs you need -->
+        <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+        
+        <script>
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyC0Xmp3jIYlPzlb5F-LoaeYTxdeKGlipW4",
+                authDomain: "oneday-65266.firebaseapp.com",
+                projectId: "oneday-65266",
+                storageBucket: "oneday-65266.appspot.com",
+                messagingSenderId: "767138026361",
+                appId: "1:767138026361:web:681390bc7793e34bcb15a8"
+            };
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+        </script>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
